@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group Chat App</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Chat App</h1>
+    </header>
+    <section>
+      <div class="left">
+        <h2>Groups</h2>
+        <div class="groups"></div>
+      </div>
+      <div class="right">
+        <form class="search">
+          <input type="number" name="number" id="number" />
+          <button type="submit" class="searchbtn">add Users</button>
+        </form>
+        <form class="remove">
+          <input type="number" name="rnumber" id="rnumber" />
+          <button type="submit" class="removebtn">remove User</button>
+        </form>
+        <form class="make-admin">
+          <input type="number" name="adminnumber" id="adminnumber" />
+          <button type="submit" class="makeadminbtn">Make Admin</button>
+        </form>
+        <div class="admin"></div>
+        <div class="group-admins">
+          <ul class="admins-list"></ul>
+        </div>
+        <div class="users">
+          <ul class="users-join"></ul>
+        </div>
+        <div class="remove">
+          <ul class="users-remove"></ul>
+        </div>
+        <div class="messages">
+          <ul class="user-message"></ul>
+        </div>
+        <div>
+          <form id="myForm">
+            <input type="text" name="message" id="message" />
+            <button type="submit">Send</button>
+          </form>
+
+          <form class="upload-file">
+            <input type="file" name="file" id="file" />
+            <button class="fileupload" type="submit">Upload</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
